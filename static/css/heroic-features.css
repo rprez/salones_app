@@ -1,0 +1,92 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+@font-face {
+    font-family: 'Lato';
+    src: local('/fonts/lato/Lato-Regular.ttf') format('ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'LatoBold';
+    src: local('/fonts/lato/Lato-Bold.ttf') format('ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    padding-top: 56px;
+    background: linear-gradient(90deg, rgb(7, 97, 223) 0%, rgb(1, 148, 158) 33%, rgb(8, 129, 129) 100%);
+    font-family: "Lato";
+}
+
+img {
+    width: 10rem;
+}
+
+#fecha {
+    float: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#clock {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card {
+    margin-top: 5rem;
+}
+
+.card-header {
+    padding: 0px;
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid white;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+.card-text {
+    font-size: 5.2rem;
+    font-weight: 700;
+}
+
+.card-footer {
+    border-radius: 25px;
+}
+
+#nrosalon {
+    margin-top: 3.2rem;
+}
+
+#contenido {
+    height: 100%;
+    width: 100%;
+}
+
+#evento {
+    padding-top: 4.4rem;
+    line-height: 4rem;
+    font-family: "Lato";
+}
+
+#horario {
+    padding-top: 1.4rem;
+}
+
+.card-footer {
+    font-size: 2rem;
+    border: none;
+    background-color: lightgrey;
+}
