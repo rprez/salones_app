@@ -1,12 +1,12 @@
-import sys
+import os
 from mysql.connector import (connection)
 from mysql.connector import errorcode
 
 config = {
-  'host': sys.argv[1],
-  'database': sys.argv[2],
-  'user': sys.argv[3],
-  'password': sys.argv[4]
+  'host': os.environ['DATABASE_IP'],
+  'database': os.environ['DATABASE_NAME'],
+  'user': os.environ['DATABASE_USER'],
+  'password': os.environ['DATABASE_PASSWORD']
 }
 
 try:
