@@ -18,10 +18,11 @@ def room(classroom_nro=None):
 
     if result:
         epoch = result[2]
-        inicio = time.strftime("%H:%M", time.localtime(epoch+60*result[3]))
-        fin =  time.strftime("%H:%M", time.localtime(epoch+60*result[4]))
-        evento = result[5].split("::")[0]
-        instructor = result[5].split("::")[1]
+        inicio = time.strftime("%H:%M", time.gmtime(epoch+60*result[3]))
+        fin =  time.strftime("%H:%M", time.gmtime(epoch+60*result[4]))
+        descripcion =  result[5].split("::")
+        evento = descripcion[0]
+        instructor = descripcion[1] if len(descripcion) > 1 else ""
         return render_template('index.html',classroom_nro=classroom_nro, classroom=result,inicio=inicio,fin=fin,evento=evento,instructor=instructor)
     else:
         return render_template('index.html', classroom_nro=classroom_nro, classroom=result, inicio=None, fin=None,evento='Libre', instructor=None)

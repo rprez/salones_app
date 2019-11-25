@@ -1,5 +1,6 @@
 from db import cursor
-
+import time
+import calendar
 
 class ClassRoom():
 
@@ -10,9 +11,9 @@ class ClassRoom():
             "FROM reservations "
             "INNER JOIN	resources ON reservations.machid=resources.machid "
             "WHERE resources.name LIKE %s ESCAPE '' "
-            "AND (UNIX_TIMESTAMP(NOW()) BETWEEN (reservations.start_date + 60*reservations.starttime) AND (reservations.end_date + 60*reservations.endtime))")
+            "AND (%s BETWEEN (reservations.start_date + 60*reservations.starttime) AND (reservations.end_date + 60*reservations.endtime))")
 
-        cursor.execute(query,('%{}%'.format(classroom_nro),))
+        cursor.execute(query,('%{}%'.format(classroom_nro),calendar.timegm(time.localtime())))
         return cursor.fetchone()
 
 
