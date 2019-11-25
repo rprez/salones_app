@@ -1,6 +1,6 @@
 # APP Salones de capacitación
 
-Esta aplicación se utiliza en la puerta de los salones de capacitación para mostrar que materia o reunión se encuentra en determinado salón.
+Esta aplicación se utiliza en las tablets que se encuentran en la puerta de los salones de capacitación para mostrar el curso o reunión del salón.
 
 # Configuración
 
@@ -15,7 +15,9 @@ Estas se encuentran dentro del archivo requeriment.txt
 
 ## Variables de ambiente.
 
- - DATABASE_IP 
+Definir las variables de ambiente para conectarse a la base de datos de reserva de salones.
+
+ - DATABASE_IP
  - DATABASE_NAME
  - DATABASE_USER
  - DATABASE_PASSWORD
