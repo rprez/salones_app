@@ -11,7 +11,6 @@ config = {
 
 try:
   conex = connection.MySQLConnection(**config)
-  cursor = conex.cursor()
 
   if conex.is_connected():
     db_Info = conex.get_server_info()
@@ -28,3 +27,7 @@ except conex.connector.Error as err:
       print("Database does not exist")
     else:
       print(err)
+
+finally:
+  cursor.close()
+  conex.close()
